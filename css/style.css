@@ -12,11 +12,14 @@
     --main: #19A7CE;
     --main-dark: #146C94;
     --main-darker: #0b3549;
-
 }
 
 *{
     font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 /** General */
@@ -61,6 +64,14 @@ section{
     margin: 0;
     font-size: 7rem;
     text-align: center;
+}
+
+#background-text{
+    position: absolute;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    opacity: 15%;
+    user-select: none;
 }
 
 #section-main p{
