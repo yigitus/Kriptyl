@@ -18,12 +18,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     overflow-x: hidden;
 }
 
 /** General */
 .container {
+    display: flex;
+    flex-direction: column;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -46,6 +52,10 @@ body{
 }
 }
 
+h2{
+    text-decoration: underline;
+}
+
 /** Sections  */
 section{
     display: flex;
@@ -55,6 +65,7 @@ section{
 
 /*** Main Section */
 #section-main{
+    position: relative;
     background-color: var(--main);
     padding: 100px 0;
     color: var(--dark);
@@ -64,6 +75,15 @@ section{
     margin: 0;
     font-size: 7rem;
     text-align: center;
+}
+
+#title{
+    z-index: 100;
+}
+
+#title span{
+    color: var(--light);
+    text-shadow: 0 0 1px black, 0 0 1px black;
 }
 
 #background-text{
@@ -77,6 +97,63 @@ section{
 #section-main p{
     font-size: 1.5rem;
     font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    color: var(--light);
+    text-shadow: 0 0 2px #000000;
+}
+
+/**** Arrow */
+#arrows-btn{
+    align-self: center;
+}
+
+#arrows-btn > svg{
+    width: 50px;
+    height: 72px;
+    padding: 15px;
+    background-color: var(--dark);
+    position: absolute;
+    bottom: -50px;
+    border-radius: 5px;
+  }
+  
+#arrows-btn > svg path {
+    stroke: var(--light);
+    fill: transparent;
+    stroke-width: 2px;  
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+  
+#arrows-btn > svg path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+  
+#arrows-btn > svg path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+  
+#arrows-btn > svg path.a3 { 
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
 
 /*** Products section */

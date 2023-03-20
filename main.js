@@ -9,8 +9,8 @@ let zoneAreaCenterY = zoneArea.top + (zoneAreaHeight * 0.5);
 let text = document.querySelector("#background-text");
 
 anime.set(text, {
-    translateX: 0,
-    translateY: 0,
+    translateX: 10,
+    translateY: 10,
 });  
 
 zone.addEventListener("pointerleave", function(e) {
@@ -37,15 +37,15 @@ function positiontext(e) {
         targets: text,
         translateX: x * 0.1,
         translateY: y * 0.1,
-        duration: 300
+        duration: 400
     });
 }
 
 function resetPosition() {
     anime({
         targets: text,
-        translateX: 0,
-        translateY: 0,
+        translateX: 10,
+        translateY: 10,
         duration: 700,
         easing: 'easeOutElastic',
     });
