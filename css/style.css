@@ -81,8 +81,11 @@ section{
     z-index: 100;
 }
 
-#title span{
+#title .logo{
     color: var(--light);
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 1.2em;
     text-shadow: 0 0 1px black, 0 0 1px black;
 }
 
@@ -93,6 +96,13 @@ section{
     opacity: 15%;
     user-select: none;
 }
+
+#background-text .logo{
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
 
 #section-main p{
     font-size: 1.5rem;
@@ -105,6 +115,7 @@ section{
 /**** Arrow */
 #arrows-btn{
     align-self: center;
+    font-size: 0;
 }
 
 #arrows-btn > svg{
@@ -236,4 +247,23 @@ section{
 
 .posts-card .title{
     font-size: 1.5rem;
+}
+
+/*** Footer  */
+footer{
+    padding: 100px 0;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .logo{
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 2rem;
 }
